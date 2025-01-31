@@ -34,6 +34,10 @@ jobs:
           npm run postinstall
           npm run build
 
+      - name: Check GITHUB_TOKEN
+        run: |
+          echo "GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}"
+
       - name: Publish releases
         env:
           # The APPLE_* values are used for auto updates signing
@@ -45,5 +49,4 @@ jobs:
           # This is used for uploading release assets to github
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "GitHub token: $GH_TOKEN"
           npm exec electron-builder -- --publish always --linux
