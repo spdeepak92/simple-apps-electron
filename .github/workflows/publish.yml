@@ -45,4 +45,5 @@ jobs:
           # This is used for uploading release assets to github
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          echo "GitHub token: $GH_TOKEN"
           npm exec electron-builder -- --publish always --linux
