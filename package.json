@@ -255,7 +255,7 @@
     ],
     "publish": {
       "provider": "github",
-      "owner": "Deepak SP",
+      "owner": "spdeepak92",
       "repo": "simple-apps"
     }
   },
