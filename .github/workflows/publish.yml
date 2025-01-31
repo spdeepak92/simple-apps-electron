@@ -21,6 +21,10 @@ jobs:
     steps:
       - name: Checkout git repo
         uses: actions/checkout@v3
+      
+      - name: Check GH_TOKEN
+        run: |
+          echo "GH_TOKEN: ${{ secrets.GH_TOKEN }}"
 
       - name: Install Node and NPM
         uses: actions/setup-node@v3
@@ -33,10 +37,6 @@ jobs:
           npm install
           npm run postinstall
           npm run build
-
-      - name: Check GITHUB_TOKEN
-        run: |
-          echo "GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}"
 
       - name: Publish releases
         env:
