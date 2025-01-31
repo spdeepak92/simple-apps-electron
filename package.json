@@ -256,7 +256,7 @@
     "publish": {
       "provider": "github",
       "owner": "spdeepak92",
-      "repo": "https://github.com/spdeepak92/simple-apps-electron"
+      "repo": "simple-apps"
     }
   },
   "collective": {
