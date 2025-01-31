@@ -24,8 +24,7 @@ jobs:
       
       - name: Check GH_TOKEN
         run: |
-          echo "GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          echo "GH_TOKEN: $GH_TOKEN"
+          echo "GH_TOKEN: ${{ secrets.GH_TOKEN }} or $GH_TOKEN"
 
       - name: Install Node and NPM
         uses: actions/setup-node@v3
