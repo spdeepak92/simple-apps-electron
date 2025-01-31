@@ -79,9 +79,8 @@ export const generateBranchName = (data: z.infer<typeof FormSchema>) => {
 
       if (word.toLowerCase() === data.skipLowercase.toLowerCase()) {
         return word;
-      } else {
-        return word.toLowerCase().replace(/[^\w\s]/gi, '');
       }
+      return word.toLowerCase().replace(/[^\w\s]/gi, '');
     })
     .filter(Boolean) // Filter out undefined, null, and empty strings
     .join('-')

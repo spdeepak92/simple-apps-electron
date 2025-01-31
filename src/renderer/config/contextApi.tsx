@@ -1,8 +1,6 @@
-import { PropsWithChildren } from 'react'
-import { CommonCtxProvider } from './commonCtxProvider'
+import { PropsWithChildren } from 'react';
+import { CommonCtxProvider } from './commonCtxProvider';
 
-export const ContextAPI = ({ children }: PropsWithChildren) => (
-    <CommonCtxProvider>
-        {children}
-    </CommonCtxProvider>
-)
+export default function ContextAPI({ children }: Readonly<PropsWithChildren>) {
+  return <CommonCtxProvider>{children}</CommonCtxProvider>;
+}
